@@ -8,35 +8,75 @@
 import XCTest
 
 class AirQualityMonitoringUITests: XCTestCase {
+    var app: XCUIApplication!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        /// Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+    //Table list UI
+    func testTableInteraction() {
+        /// Assert that we are displaying the tableview
+        let cityTableView = app.tables["table--cityTableView"]
+        XCTAssertTrue(cityTableView.exists, "The city list tableview exists")
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        /// Get an array of cells
+        let tableCells = cityTableView.cells
+
+        if tableCells.count > 0 {
+            let count: Int = (tableCells.count - 1)
+            let promise = expectation(description: "Wait for table cells")
+            for i in stride(from: 0, to: count , by: 1) {
+                /// Grab the first cell and verify that it exists and tap it
+                let tableCell = tableCells.element(boundBy: i)
+                XCTAssertTrue(tableCell.exists, "The \(i) cell is in place on the table")
+                tableCell.tap()
+
+                if i == (count - 1) {
+                    promise.fulfill()
+                }
+                let app = XCUIApplication()
+                /// Back
+                app.navigationBars.buttons.element(boundBy: 0).tap()
+            }
+            waitForExpectations(timeout: Double(tableCells.count*4), handler: nil)
+            XCTAssertTrue(true, "Finished validating the table cells")
+
+        } else {
+            XCTAssert(false, "Was not able to find any table cells")
+        }
     }
 
+    /// Navigation bar item UI
+    func testButtonInteraction() {
+        if app != nil {
+            let infoButton = app.buttons["infoNavBarRightItem"]
+            if infoButton.exists {
+                infoButton.tap()
+                XCTAssertTrue(true, "Finished validating info button tap")
+            } else {
+                XCTAssert(false, "Was not able to find info button")
+            }
+
+        } else {
+            XCTAssert(false, "Was not able to find app")
+        }
+    }
+
+    /// Launch performance
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
+            /// This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
         }
     }
 }
+
