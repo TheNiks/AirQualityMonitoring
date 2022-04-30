@@ -16,13 +16,13 @@ Here display the live air quality monitoring data.
 
 ## Architecture
 - Used VIPER Architecture.
-- https://github.com/TheNiks/AirQualityMonitoring/blob/d3a1a04011ca9a9ae1a7ebb80e8411e3be2bae88/VIPER.png
+- ![VIPER Diagram](https://github.com/TheNiks/AirQualityMonitoring/blob/d3a1a04011ca9a9ae1a7ebb80e8411e3be2bae88/VIPER.png)
 
 ## Storage
 - CoreData
 
 ## Folder Structure
-- https://github.com/TheNiks/AirQualityMonitoring/blob/bd72124ce314355f5bb0b49d40c914b1cbaa58d2/FolderStructure.png
+- ![Floder Structure](https://github.com/TheNiks/AirQualityMonitoring/blob/bd72124ce314355f5bb0b49d40c914b1cbaa58d2/FolderStructure.png)
 
 ### Third Party Library
 - Websocket => https://github.com/daltoniam/Starscream
