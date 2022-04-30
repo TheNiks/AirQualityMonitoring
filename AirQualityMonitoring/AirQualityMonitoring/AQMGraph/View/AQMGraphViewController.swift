@@ -13,7 +13,6 @@ import Charts
 class AQMGraphViewController: UIViewController {
     
     var cityModel: AQMCityDataModel = AQMCityDataModel(city: "")
-    private var viewModel: AQMDetailViewModel?
     /// Thread safe bag that disposes added disposables on `deinit`.
     private var bag = DisposeBag()
     /// LineChartView instance
@@ -22,12 +21,11 @@ class AQMGraphViewController: UIViewController {
 
     /// Determine how many dataEntries show up in the chartView
     var xValue: Double = 20
-
+    var presentor: GraphViewToPresenterProtocol?
+    var data: AQMCityDataModel?
     /// Life cycle method
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel = AQMDetailViewModel(dataProvider: AQMDataProvider())
         self.title = cityModel.city
         view.addSubview(chartView)
         chartView.xAxis.axisMinimum = 1
@@ -46,28 +44,35 @@ class AQMGraphViewController: UIViewController {
 
     /// Bind CityDataModel's item to get updated data
     func bindData() {
-        viewModel?.item.bind { model in
-            if let v = model.history.last?.value {
-                let roundingValue: Double = Double(round(v * 100) / 100.0)
-                let newDataEntry = ChartDataEntry(x: self.xValue,
-                                                  y: Double(roundingValue))
-                self.updateChartView(with: newDataEntry, dataEntries: &self.dataEntries)
-                self.xValue += 1
-            }
-        }.disposed(by: bag)
+        if let v = cityModel.history.last?.value {
+            let roundingValue: Double = Double(round(v * 100) / 100.0)
+            let newDataEntry = ChartDataEntry(x: self.xValue,
+                                              y: Double(roundingValue))
+            self.updateChartView(with: newDataEntry, dataEntries: &self.dataEntries)
+            self.xValue += 1
+        }
     }
 
     /// Life cycle method
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel?.subscribe(forCity: cityModel.city)
+        fetchPresenter()
     }
 
     /// Life cycle method
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        viewModel?.unsubscribe()
     }
+    
+    private func fetchPresenter() {
+        presentor?.fetchingAQMData(city: cityModel.city)
+    }
+    
+    /// Life cycle method
+    deinit {
+        presentor?.unsubscribe()
+    }
+
 }
 
 /// Graph UI
@@ -111,5 +116,26 @@ extension AQMGraphViewController {
 
         chartView.notifyDataSetChanged()
         chartView.moveViewToX(newDataEntry.x)
+    }
+}
+
+extension AQMGraphViewController: GraphPresenterToViewProtocol {
+    
+    func showAQMData(data: AQMCityDataModel?) {
+        if let v = data?.history.last?.value {
+            let roundingValue: Double = Double(round(v * 100) / 100.0)
+            let newDataEntry = ChartDataEntry(x: self.xValue,
+                                              y: Double(roundingValue))
+            self.updateChartView(with: newDataEntry, dataEntries: &self.dataEntries)
+            self.xValue += 1
+        }
+    }
+    
+    func showError(error: String) {
+        // Do it later
+    }
+    
+    func isLoading(isLoading: Bool) {
+        // Do it later
     }
 }

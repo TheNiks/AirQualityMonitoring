@@ -1,41 +1,40 @@
 //
-//  AQMDetailViewModel.swift
+//  AQMGraphInteractor.swift
 //  AirQualityMonitoring
 //
-//  Created by Nikunj Modi on 28/01/22.
+//  Created by Nikunj Modi on 20/04/22.
 //
 
 import Foundation
-import Starscream
 import RxSwift
-import RxCocoa
 
-class AQMDetailViewModel {
-    
+class AQMGraphInteractor : GraphPresenterToInteractorProtocol {
     private var city: String = ""
     var prevItem: AQMCityDataModel? = nil
-    /// Binding publish subject for recieving updates
     var item = PublishSubject<AQMCityDataModel>()
-    var provider: AQMDataProvider?
+    var presenter: GraphInteractorToPresenterProtocol?
+    //private let service: NetworkManager
+    private var provider: AQMDataProvider?
+    let disposeBag = DisposeBag()
     
-    /// Intialize method
-    init(dataProvider: AQMDataProvider) {
-        provider = dataProvider
-        provider?.delegate = self
-    }
-    /// Subscribe to recieve city's updated history data
-    func subscribe(forCity: String) {
+    func fetchingAQMData(forCity: String) {
         self.city = forCity
         provider?.subscribe()
     }
-    /// Unsubscribe to stop recieving city's updated history data
+    
+    init(service: AQMDataProvider = AQMDataProvider()) {
+        provider = service
+        provider?.delegate = self
+    }
+    
     func unsubscribe() {
         provider?.unsubscribe()
     }
 }
 
-extension AQMDetailViewModel: AQMDataProviderDelegate {
-    /// Recieved response from DataProvider
+extension AQMGraphInteractor: AQMDataProviderDelegate {
+
+    // Recieved response from DataProvider
     func didReceive(response: Result<[AQMResponseData], Error>) {
         switch response {
         case .success(let response):
@@ -61,11 +60,12 @@ extension AQMDetailViewModel: AQMDataProviderDelegate {
             }
         }
         if let prevRecord = prevItem {
-            item.onNext(prevRecord)
+            //item.onNext(prevRecord)
+            presenter?.fetchedAQMSuccess(data: prevRecord)
         }
     }
 
-    /// Helper to didReceive() method for error handling
+    // Helper to didReceive() method for error handling
     func handleError(error: Error?) {
         if let error = error {
             item.onError(error)

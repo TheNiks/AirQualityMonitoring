@@ -1,39 +1,34 @@
 //
-//  AQMListViewModel.swift
+//  AQMListInteractor.swift
 //  AirQualityMonitoring
 //
-//  Created by Nikunj Modi on 28/01/22.
+//  Created by Nikunj Modi on 18/04/22.
 //
 
 import Foundation
 import RxSwift
-import RxCocoa
-
-class AQMListViewModel {
-    
+ 
+class AQMListInteractor : PresenterToInteractorProtocol {
     var prevItems: [AQMCityDataModel] = [AQMCityDataModel]()
-    /// Binding publish subject for recieving updates
     var items = PublishSubject<[AQMCityDataModel]>()
-    var provider: AQMDataProvider?
-
-    /// Intialize with data provider
-    init(dataProvider: AQMDataProvider) {
-        provider = dataProvider
-        provider?.delegate = self
-    }
-
-    /// Subscribe to recieve city's updated history data
-    func subscribe() {
+    var presenter: InteractorToPresenterProtocol?
+    private var provider: AQMDataProvider?
+    
+    func fetchingAQMData() {
         provider?.subscribe()
     }
-
-    /// Unsubscribe to stop recieving city's updated history data
+    
+    init(service: AQMDataProvider = AQMDataProvider()) {
+        provider = service
+        provider?.delegate = self
+    }
+    
     func unsubscribe() {
         provider?.unsubscribe()
     }
 }
 
-extension AQMListViewModel: AQMDataProviderDelegate {
+extension AQMListInteractor: AQMDataProviderDelegate {
 
     // Recieved response from DataProvider
     func didReceive(response: Result<[AQMResponseData], Error>) {
@@ -47,7 +42,6 @@ extension AQMListViewModel: AQMDataProviderDelegate {
 
     // Helper to didReceive() method for parsing data
     func parseAndNotify(resArray: [AQMResponseData]) {
-
         if prevItems.count == 0 {
             for record in resArray {
                 let model = AQMCityDataModel(city: record.city)
@@ -66,13 +60,14 @@ extension AQMListViewModel: AQMDataProviderDelegate {
                 }
             }
         }
-        items.onNext(prevItems)
+        presenter?.fetchedAQMSuccess(data: prevItems)
     }
 
     // Helper to didReceive() method for error handling
     func handleError(error: Error?) {
         if let error = error {
-            items.onError(error)
+            //items.onError(error)
+            presenter?.fetchFailed(error: error.localizedDescription)
         }
     }
 }

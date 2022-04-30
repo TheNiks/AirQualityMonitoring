@@ -13,6 +13,10 @@ protocol AQMDataProviderDelegate {
     func didReceive(response: Result<[AQMResponseData], Error>)
 }
 
+public enum InternetError: Error {
+    case disable
+}
+
 class AQMDataProvider {
     
     var isConnected: Bool = false
@@ -35,7 +39,11 @@ class AQMDataProvider {
     /// Subcribe to websocket connection
     func subscribe() {
         self.socket?.delegate = self
-        self.socket?.connect()
+        if Reachability.isConnectedToNetwork() {
+            self.socket?.connect()
+        } else {
+            self.socket?.didReceive(event:.error(InternetError.disable))
+        }
     }
 
     /// Unsubcribe to websocket connection
@@ -90,7 +98,9 @@ extension AQMDataProvider: WebSocketDelegate {
         let jsonData = Data(text.utf8)
         let decoder = JSONDecoder()
         do {
+            CoreDataManager.sharedInstance.saveData(data: jsonData)
             //Decode data
+            
             let resArray = try decoder.decode([AQMResponseData].self, from: jsonData)
             //Inform delegate implemenator that new data has arrived
             self.delegate?.didReceive(response: .success(resArray))
@@ -102,7 +112,15 @@ extension AQMDataProvider: WebSocketDelegate {
     /// Handle error from websocket's delegate method didReceive()
     private func handleError(error: Error?) {
         if let e = error {
-            self.delegate?.didReceive(response: .failure(e))
+            if e as! InternetError == InternetError.disable {
+                guard let resArray = CoreDataManager.sharedInstance.loadSavedData() else{
+                    return
+                }
+                self.delegate?.didReceive(response: .success(resArray))
+                
+            } else {
+                self.delegate?.didReceive(response: .failure(e))
+            }
         }
     }
 }

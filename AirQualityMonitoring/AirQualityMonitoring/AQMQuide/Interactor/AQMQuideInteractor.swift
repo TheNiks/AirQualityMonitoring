@@ -1,23 +1,22 @@
 //
-//  AQMQuideViewModel.swift
+//  AQMQuideInteractor.swift
 //  AirQualityMonitoring
 //
-//  Created by Nikunj Modi on 28/01/22.
+//  Created by Nikunj Modi on 21/04/22.
 //
 
 import Foundation
 import RxSwift
-import RxCocoa
 
-class AQMQuideViewModel {
+class AQMQuideInteractor : QuidePresenterToInteractorProtocol {
+    var presenter: QuideInteractorToPresenterProtocol?
     var rangeOffset = 50
     var indexRange = 50
     var aqmRecords = [AQMQuideModel]()
-    /// Binding publish subject for recieving updates
-    var items = PublishSubject<[AQMQuideModel]>()
-
-    /// Prepare the records for Air Quality Monitor Index guide
-    func setupAQMGuide() {
+    
+    init() {}
+    
+    func fetchingAQMQuideData() {
         for (index, element) in AQMIndexClassification.allCases.enumerated() {
             /// Fetch the color based on AQMIndexClassification case
             if let backgroundColor = AQMIndexColorClassifier.color(index: element) {
@@ -29,7 +28,6 @@ class AQMQuideViewModel {
             
         }
         aqmRecords.removeLast()
-        items.onNext(aqmRecords)
+        presenter?.fetchedAQMSuccess(data: aqmRecords)
     }
 }
-

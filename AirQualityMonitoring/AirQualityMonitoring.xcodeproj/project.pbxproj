@@ -10,14 +10,28 @@
 		0D968F668EBE26B6201AB197 /* Pods_AirQualityMonitoringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390AC1DED6558D2BCE3D8BE6 /* Pods_AirQualityMonitoringTests.framework */; };
 		27A39DF5A2D8C9311C001FA1 /* Pods_AirQualityMonitoring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A8B4BC6EABE46F2290D3F9 /* Pods_AirQualityMonitoring.framework */; };
 		5E66B967D6499FDBCB0119D6 /* Pods_AirQualityMonitoring_AirQualityMonitoringUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E83C3274BAB840E85F31FA /* Pods_AirQualityMonitoring_AirQualityMonitoringUITests.framework */; };
-		9D4A9A9727A509D0009599BF /* AQMListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9A9627A509D0009599BF /* AQMListViewModelTests.swift */; };
+		9D02C63B280D3D8300DE6D51 /* AQMListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D02C63A280D3D8300DE6D51 /* AQMListProtocol.swift */; };
+		9D02C644280D3ED000DE6D51 /* AQMListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D02C643280D3ED000DE6D51 /* AQMListRouter.swift */; };
+		9D02C64A280D3F6800DE6D51 /* AQMListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D02C649280D3F6800DE6D51 /* AQMListPresenter.swift */; };
+		9D02C650280D429F00DE6D51 /* AQMListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D02C64F280D429F00DE6D51 /* AQMListInteractor.swift */; };
+		9D12C8262816AF2000232960 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12C8252816AF2000232960 /* Reachability.swift */; };
+		9D12C8272816AF2000232960 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12C8252816AF2000232960 /* Reachability.swift */; };
+		9D4A9A9727A509D0009599BF /* AQMListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9A9627A509D0009599BF /* AQMListViewTests.swift */; };
 		9D4A9AD127A50C17009599BF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4A9AD027A50C17009599BF /* Nimble.framework */; };
 		9D4A9AD327A50C27009599BF /* RxNimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4A9AD227A50C27009599BF /* RxNimble.framework */; };
 		9D4A9AE327A50CAB009599BF /* AQMFakeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9AE227A50CAB009599BF /* AQMFakeDataProvider.swift */; };
-		9D4A9AE827A50D04009599BF /* AQMDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9AE727A50D04009599BF /* AQMDetailViewModelTests.swift */; };
+		9D4A9AE827A50D04009599BF /* AQMDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9AE727A50D04009599BF /* AQMDetailViewTests.swift */; };
 		9D4A9AF027A51065009599BF /* FakeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9AEF27A51065009599BF /* FakeDataProvider.swift */; };
 		9D4A9AF527A52940009599BF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9AF427A52940009599BF /* UIColor+Extension.swift */; };
 		9D4A9AFA27A54FE0009599BF /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9AF927A54FE0009599BF /* Date+Extension.swift */; };
+		9D4B10A8281565F300E34AC0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B10A7281565F300E34AC0 /* CoreDataManager.swift */; };
+		9D5FD7322815704000E1010B /* AQMResData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FD7302815704000E1010B /* AQMResData+CoreDataClass.swift */; };
+		9D5FD7332815704000E1010B /* AQMResData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FD7312815704000E1010B /* AQMResData+CoreDataProperties.swift */; };
+		9D5FD75828157C5F00E1010B /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FD75728157C5F00E1010B /* CodingUserInfoKey.swift */; };
+		9D606C8A280FFBA300DD3F37 /* AQMGraphInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D606C89280FFBA300DD3F37 /* AQMGraphInteractor.swift */; };
+		9D606C8F280FFBBD00DD3F37 /* AQMGraphPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D606C8E280FFBBD00DD3F37 /* AQMGraphPresenter.swift */; };
+		9D606C9C280FFBDA00DD3F37 /* AQMGraphProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D606C9B280FFBDA00DD3F37 /* AQMGraphProtocol.swift */; };
+		9D606CA1280FFBEA00DD3F37 /* AQMGraphRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D606CA0280FFBEA00DD3F37 /* AQMGraphRouter.swift */; };
 		9D6E611427A3FE0D00663B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E611327A3FE0D00663B73 /* AppDelegate.swift */; };
 		9D6E611627A3FE0D00663B73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E611527A3FE0D00663B73 /* SceneDelegate.swift */; };
 		9D6E611B27A3FE0D00663B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D6E611927A3FE0D00663B73 /* Main.storyboard */; };
@@ -29,14 +43,20 @@
 		9D6E618327A4228800663B73 /* AQMListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E618227A4228800663B73 /* AQMListViewController.swift */; };
 		9D6E618827A4237F00663B73 /* AQMGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E618727A4237F00663B73 /* AQMGraphViewController.swift */; };
 		9D6E618D27A423FE00663B73 /* AQMCityDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E618C27A423FE00663B73 /* AQMCityDataTableViewCell.swift */; };
-		9D6E619227A4246E00663B73 /* AQMQuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E619127A4246E00663B73 /* AQMQuideViewModel.swift */; };
-		9D6E619727A424DC00663B73 /* AQMListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E619627A424DC00663B73 /* AQMListViewModel.swift */; };
-		9D6E619C27A4251000663B73 /* AQMDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E619B27A4251000663B73 /* AQMDetailViewModel.swift */; };
-		9D6E61A127A4256400663B73 /* AQMDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E61A027A4256400663B73 /* AQMDataProvider.swift */; };
 		9D6E61A627A425E300663B73 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E61A527A425E300663B73 /* APIConstants.swift */; };
 		9D6E61AB27A4261D00663B73 /* AQMIndexClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E61AA27A4261D00663B73 /* AQMIndexClassifier.swift */; };
 		9D6E61B027A4268200663B73 /* AQMResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E61AF27A4268200663B73 /* AQMResponseData.swift */; };
 		9D6E61B527A4269C00663B73 /* AQMCityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E61B427A4269C00663B73 /* AQMCityDataModel.swift */; };
+		9D73623F281BA3E2007A2ABB /* AQMDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73623E281BA3E2007A2ABB /* AQMDataProvider.swift */; };
+		9D73625C281C0935007A2ABB /* AQMQuideViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73625B281C0935007A2ABB /* AQMQuideViewTests.swift */; };
+		9D736267281C0B6E007A2ABB /* AQMCoreDataAndUtiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D736266281C0B6D007A2ABB /* AQMCoreDataAndUtiTests.swift */; };
+		9D73626F281C0EC7007A2ABB /* AQMListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73626E281C0EC7007A2ABB /* AQMListViewControllerTests.swift */; };
+		9D73627A281C12AE007A2ABB /* AQMQuideViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D736279281C12AE007A2ABB /* AQMQuideViewControllerTests.swift */; };
+		9DD2785F2811180F00BA6C96 /* AQMQuideProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2785E2811180F00BA6C96 /* AQMQuideProtocol.swift */; };
+		9DD27867281118A700BA6C96 /* AQMQuideInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD27866281118A700BA6C96 /* AQMQuideInteractor.swift */; };
+		9DD2786D28111C8F00BA6C96 /* AQMQuidePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2786C28111C8F00BA6C96 /* AQMQuidePresenter.swift */; };
+		9DD2787328111EF100BA6C96 /* AQMQuideRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2787228111EF100BA6C96 /* AQMQuideRouter.swift */; };
+		9DD2788F28117C1000BA6C96 /* AQMCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2788D28117C1000BA6C96 /* AQMCoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,15 +82,28 @@
 		40E6D5B29D7229D518165FF3 /* Pods-AirQualityMonitoringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitoringTests.release.xcconfig"; path = "Target Support Files/Pods-AirQualityMonitoringTests/Pods-AirQualityMonitoringTests.release.xcconfig"; sourceTree = "<group>"; };
 		686E8255B30F15EB34466F1F /* Pods-AirQualityMonitoring-AirQualityMonitoringUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitoring-AirQualityMonitoringUITests.release.xcconfig"; path = "Target Support Files/Pods-AirQualityMonitoring-AirQualityMonitoringUITests/Pods-AirQualityMonitoring-AirQualityMonitoringUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E648558252C772B078CA5DE /* Pods-AirQualityMonitoringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitoringTests.debug.xcconfig"; path = "Target Support Files/Pods-AirQualityMonitoringTests/Pods-AirQualityMonitoringTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D02C63A280D3D8300DE6D51 /* AQMListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMListProtocol.swift; sourceTree = "<group>"; };
+		9D02C643280D3ED000DE6D51 /* AQMListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMListRouter.swift; sourceTree = "<group>"; };
+		9D02C649280D3F6800DE6D51 /* AQMListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMListPresenter.swift; sourceTree = "<group>"; };
+		9D02C64F280D429F00DE6D51 /* AQMListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMListInteractor.swift; sourceTree = "<group>"; };
 		9D077FE3CE75421A1669A456 /* Pods-AirQualityMonitoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitoring.release.xcconfig"; path = "Target Support Files/Pods-AirQualityMonitoring/Pods-AirQualityMonitoring.release.xcconfig"; sourceTree = "<group>"; };
-		9D4A9A9627A509D0009599BF /* AQMListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMListViewModelTests.swift; sourceTree = "<group>"; };
+		9D12C8252816AF2000232960 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9D4A9A9627A509D0009599BF /* AQMListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMListViewTests.swift; sourceTree = "<group>"; };
 		9D4A9AD027A50C17009599BF /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4A9AD227A50C27009599BF /* RxNimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxNimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4A9AE227A50CAB009599BF /* AQMFakeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMFakeDataProvider.swift; sourceTree = "<group>"; };
-		9D4A9AE727A50D04009599BF /* AQMDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMDetailViewModelTests.swift; sourceTree = "<group>"; };
+		9D4A9AE727A50D04009599BF /* AQMDetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMDetailViewTests.swift; sourceTree = "<group>"; };
 		9D4A9AEF27A51065009599BF /* FakeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataProvider.swift; sourceTree = "<group>"; };
 		9D4A9AF427A52940009599BF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9D4A9AF927A54FE0009599BF /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9D4B10A7281565F300E34AC0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9D5FD7302815704000E1010B /* AQMResData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AQMResData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9D5FD7312815704000E1010B /* AQMResData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AQMResData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9D5FD75728157C5F00E1010B /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
+		9D606C89280FFBA300DD3F37 /* AQMGraphInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMGraphInteractor.swift; sourceTree = "<group>"; };
+		9D606C8E280FFBBD00DD3F37 /* AQMGraphPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMGraphPresenter.swift; sourceTree = "<group>"; };
+		9D606C9B280FFBDA00DD3F37 /* AQMGraphProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMGraphProtocol.swift; sourceTree = "<group>"; };
+		9D606CA0280FFBEA00DD3F37 /* AQMGraphRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMGraphRouter.swift; sourceTree = "<group>"; };
 		9D6E611027A3FE0D00663B73 /* AirQualityMonitoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityMonitoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6E611327A3FE0D00663B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D6E611527A3FE0D00663B73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,14 +121,20 @@
 		9D6E618227A4228800663B73 /* AQMListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMListViewController.swift; sourceTree = "<group>"; };
 		9D6E618727A4237F00663B73 /* AQMGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMGraphViewController.swift; sourceTree = "<group>"; };
 		9D6E618C27A423FE00663B73 /* AQMCityDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMCityDataTableViewCell.swift; sourceTree = "<group>"; };
-		9D6E619127A4246E00663B73 /* AQMQuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMQuideViewModel.swift; sourceTree = "<group>"; };
-		9D6E619627A424DC00663B73 /* AQMListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMListViewModel.swift; sourceTree = "<group>"; };
-		9D6E619B27A4251000663B73 /* AQMDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMDetailViewModel.swift; sourceTree = "<group>"; };
-		9D6E61A027A4256400663B73 /* AQMDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMDataProvider.swift; sourceTree = "<group>"; };
 		9D6E61A527A425E300663B73 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		9D6E61AA27A4261D00663B73 /* AQMIndexClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMIndexClassifier.swift; sourceTree = "<group>"; };
 		9D6E61AF27A4268200663B73 /* AQMResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMResponseData.swift; sourceTree = "<group>"; };
 		9D6E61B427A4269C00663B73 /* AQMCityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMCityDataModel.swift; sourceTree = "<group>"; };
+		9D73623E281BA3E2007A2ABB /* AQMDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQMDataProvider.swift; sourceTree = "<group>"; };
+		9D73625B281C0935007A2ABB /* AQMQuideViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQMQuideViewTests.swift; sourceTree = "<group>"; };
+		9D736266281C0B6D007A2ABB /* AQMCoreDataAndUtiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQMCoreDataAndUtiTests.swift; sourceTree = "<group>"; };
+		9D73626E281C0EC7007A2ABB /* AQMListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQMListViewControllerTests.swift; sourceTree = "<group>"; };
+		9D736279281C12AE007A2ABB /* AQMQuideViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQMQuideViewControllerTests.swift; sourceTree = "<group>"; };
+		9DD2785E2811180F00BA6C96 /* AQMQuideProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMQuideProtocol.swift; sourceTree = "<group>"; };
+		9DD27866281118A700BA6C96 /* AQMQuideInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMQuideInteractor.swift; sourceTree = "<group>"; };
+		9DD2786C28111C8F00BA6C96 /* AQMQuidePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMQuidePresenter.swift; sourceTree = "<group>"; };
+		9DD2787228111EF100BA6C96 /* AQMQuideRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQMQuideRouter.swift; sourceTree = "<group>"; };
+		9DD2788E28117C1000BA6C96 /* AQMCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AQMCoreData.xcdatamodel; sourceTree = "<group>"; };
 		C4A8B4BC6EABE46F2290D3F9 /* Pods_AirQualityMonitoring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQualityMonitoring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE55C4D61D1EC29A392F0F34 /* Pods-AirQualityMonitoring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitoring.debug.xcconfig"; path = "Target Support Files/Pods-AirQualityMonitoring/Pods-AirQualityMonitoring.debug.xcconfig"; sourceTree = "<group>"; };
 		D436935902F6A2EAAD2B70A3 /* Pods-AirQualityMonitoring-AirQualityMonitoringUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityMonitoring-AirQualityMonitoringUITests.debug.xcconfig"; path = "Target Support Files/Pods-AirQualityMonitoring-AirQualityMonitoringUITests/Pods-AirQualityMonitoring-AirQualityMonitoringUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +182,119 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D02C634280D3CD400DE6D51 /* AQMList */ = {
+			isa = PBXGroup;
+			children = (
+				9D02C639280D3D5900DE6D51 /* View */,
+				9D02C638280D3D0A00DE6D51 /* Interactor */,
+				9D02C637280D3CFC00DE6D51 /* Presenter */,
+				9D02C636280D3CF300DE6D51 /* Protocol */,
+				9D02C635280D3CEA00DE6D51 /* Router */,
+			);
+			path = AQMList;
+			sourceTree = "<group>";
+		};
+		9D02C635280D3CEA00DE6D51 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9D02C643280D3ED000DE6D51 /* AQMListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9D02C636280D3CF300DE6D51 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9D02C63A280D3D8300DE6D51 /* AQMListProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9D02C637280D3CFC00DE6D51 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D02C649280D3F6800DE6D51 /* AQMListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9D02C638280D3D0A00DE6D51 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9D02C64F280D429F00DE6D51 /* AQMListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9D02C639280D3D5900DE6D51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D6E618C27A423FE00663B73 /* AQMCityDataTableViewCell.swift */,
+				9D6E618227A4228800663B73 /* AQMListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D4B10A6281565CC00E34AC0 /* CoreDataService */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B10A7281565F300E34AC0 /* CoreDataManager.swift */,
+			);
+			path = CoreDataService;
+			sourceTree = "<group>";
+		};
+		9D606C80280FF99800DD3F37 /* AQMGraph */ = {
+			isa = PBXGroup;
+			children = (
+				9D606C84280FFB1000DD3F37 /* View */,
+				9D606C85280FFB1900DD3F37 /* Interactor */,
+				9D606C86280FFB2100DD3F37 /* Presenter */,
+				9D606C87280FFB2A00DD3F37 /* Protocol */,
+				9D606C88280FFB3500DD3F37 /* Router */,
+			);
+			path = AQMGraph;
+			sourceTree = "<group>";
+		};
+		9D606C84280FFB1000DD3F37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D6E618727A4237F00663B73 /* AQMGraphViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D606C85280FFB1900DD3F37 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9D606C89280FFBA300DD3F37 /* AQMGraphInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9D606C86280FFB2100DD3F37 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D606C8E280FFBBD00DD3F37 /* AQMGraphPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9D606C87280FFB2A00DD3F37 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9D606C9B280FFBDA00DD3F37 /* AQMGraphProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9D606C88280FFB3500DD3F37 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9D606CA0280FFBEA00DD3F37 /* AQMGraphRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		9D6E610727A3FE0D00663B73 = {
 			isa = PBXGroup;
 			children = (
@@ -168,17 +320,20 @@
 		9D6E611227A3FE0D00663B73 /* AirQualityMonitoring */ = {
 			isa = PBXGroup;
 			children = (
+				9D73623D281BA3D0007A2ABB /* ViewModel */,
+				9DD278582811175100BA6C96 /* AQMQuide */,
+				9D606C80280FF99800DD3F37 /* AQMGraph */,
+				9D02C634280D3CD400DE6D51 /* AQMList */,
 				9D6E616C27A41FCF00663B73 /* Models */,
 				9D6E616B27A41FB200663B73 /* Extension */,
 				9D6E616A27A41FA100663B73 /* Utilty */,
-				9D6E616927A41F7A00663B73 /* ViewModels */,
-				9D6E616827A41F6D00663B73 /* Views */,
 				9D6E611327A3FE0D00663B73 /* AppDelegate.swift */,
 				9D6E611527A3FE0D00663B73 /* SceneDelegate.swift */,
 				9D6E611927A3FE0D00663B73 /* Main.storyboard */,
 				9D6E611C27A3FE0F00663B73 /* Assets.xcassets */,
 				9D6E611E27A3FE0F00663B73 /* LaunchScreen.storyboard */,
 				9D6E612127A3FE0F00663B73 /* Info.plist */,
+				9DD2788D28117C1000BA6C96 /* AQMCoreData.xcdatamodeld */,
 			);
 			path = AirQualityMonitoring;
 			sourceTree = "<group>";
@@ -187,9 +342,13 @@
 			isa = PBXGroup;
 			children = (
 				9D6E612C27A3FE0F00663B73 /* Info.plist */,
-				9D4A9A9627A509D0009599BF /* AQMListViewModelTests.swift */,
+				9D736279281C12AE007A2ABB /* AQMQuideViewControllerTests.swift */,
+				9D73626E281C0EC7007A2ABB /* AQMListViewControllerTests.swift */,
+				9D736266281C0B6D007A2ABB /* AQMCoreDataAndUtiTests.swift */,
+				9D73625B281C0935007A2ABB /* AQMQuideViewTests.swift */,
+				9D4A9A9627A509D0009599BF /* AQMListViewTests.swift */,
 				9D4A9AE227A50CAB009599BF /* AQMFakeDataProvider.swift */,
-				9D4A9AE727A50D04009599BF /* AQMDetailViewModelTests.swift */,
+				9D4A9AE727A50D04009599BF /* AQMDetailViewTests.swift */,
 				9D4A9AEF27A51065009599BF /* FakeDataProvider.swift */,
 			);
 			path = AirQualityMonitoringTests;
@@ -204,32 +363,12 @@
 			path = AirQualityMonitoringUITests;
 			sourceTree = "<group>";
 		};
-		9D6E616827A41F6D00663B73 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9D6E617827A4216C00663B73 /* AQMQuideViewController.swift */,
-				9D6E617D27A421ED00663B73 /* AQMQuideTableViewCell.swift */,
-				9D6E618227A4228800663B73 /* AQMListViewController.swift */,
-				9D6E618727A4237F00663B73 /* AQMGraphViewController.swift */,
-				9D6E618C27A423FE00663B73 /* AQMCityDataTableViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9D6E616927A41F7A00663B73 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				9D6E619127A4246E00663B73 /* AQMQuideViewModel.swift */,
-				9D6E619627A424DC00663B73 /* AQMListViewModel.swift */,
-				9D6E619B27A4251000663B73 /* AQMDetailViewModel.swift */,
-				9D6E61A027A4256400663B73 /* AQMDataProvider.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D6E616A27A41FA100663B73 /* Utilty */ = {
 			isa = PBXGroup;
 			children = (
+				9D12C8252816AF2000232960 /* Reachability.swift */,
+				9D5FD75728157C5F00E1010B /* CodingUserInfoKey.swift */,
+				9D4B10A6281565CC00E34AC0 /* CoreDataService */,
 				9D6E61A527A425E300663B73 /* APIConstants.swift */,
 				9D6E61AA27A4261D00663B73 /* AQMIndexClassifier.swift */,
 			);
@@ -248,10 +387,73 @@
 		9D6E616C27A41FCF00663B73 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9D5FD7302815704000E1010B /* AQMResData+CoreDataClass.swift */,
+				9D5FD7312815704000E1010B /* AQMResData+CoreDataProperties.swift */,
 				9D6E61AF27A4268200663B73 /* AQMResponseData.swift */,
 				9D6E61B427A4269C00663B73 /* AQMCityDataModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9D73623D281BA3D0007A2ABB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9D73623E281BA3E2007A2ABB /* AQMDataProvider.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9DD278582811175100BA6C96 /* AQMQuide */ = {
+			isa = PBXGroup;
+			children = (
+				9DD278592811176200BA6C96 /* View */,
+				9DD2785A2811176C00BA6C96 /* Interactor */,
+				9DD2785B2811177E00BA6C96 /* Presenter */,
+				9DD2785C2811179200BA6C96 /* Protocol */,
+				9DD2785D281117AC00BA6C96 /* Router */,
+			);
+			path = AQMQuide;
+			sourceTree = "<group>";
+		};
+		9DD278592811176200BA6C96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D6E617827A4216C00663B73 /* AQMQuideViewController.swift */,
+				9D6E617D27A421ED00663B73 /* AQMQuideTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DD2785A2811176C00BA6C96 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9DD27866281118A700BA6C96 /* AQMQuideInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9DD2785B2811177E00BA6C96 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2786C28111C8F00BA6C96 /* AQMQuidePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DD2785C2811179200BA6C96 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2785E2811180F00BA6C96 /* AQMQuideProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9DD2785D281117AC00BA6C96 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2787228111EF100BA6C96 /* AQMQuideRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		DC5EEFD709C302B07EE7E2C3 /* Pods */ = {
@@ -523,22 +725,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5FD7322815704000E1010B /* AQMResData+CoreDataClass.swift in Sources */,
+				9D02C64A280D3F6800DE6D51 /* AQMListPresenter.swift in Sources */,
+				9DD27867281118A700BA6C96 /* AQMQuideInteractor.swift in Sources */,
+				9D02C650280D429F00DE6D51 /* AQMListInteractor.swift in Sources */,
 				9D6E617E27A421ED00663B73 /* AQMQuideTableViewCell.swift in Sources */,
 				9D6E611427A3FE0D00663B73 /* AppDelegate.swift in Sources */,
+				9DD2787328111EF100BA6C96 /* AQMQuideRouter.swift in Sources */,
+				9D606C9C280FFBDA00DD3F37 /* AQMGraphProtocol.swift in Sources */,
+				9D5FD75828157C5F00E1010B /* CodingUserInfoKey.swift in Sources */,
+				9D606C8F280FFBBD00DD3F37 /* AQMGraphPresenter.swift in Sources */,
 				9D6E61B027A4268200663B73 /* AQMResponseData.swift in Sources */,
-				9D6E619727A424DC00663B73 /* AQMListViewModel.swift in Sources */,
-				9D6E619C27A4251000663B73 /* AQMDetailViewModel.swift in Sources */,
+				9DD2786D28111C8F00BA6C96 /* AQMQuidePresenter.swift in Sources */,
+				9D4B10A8281565F300E34AC0 /* CoreDataManager.swift in Sources */,
+				9D606C8A280FFBA300DD3F37 /* AQMGraphInteractor.swift in Sources */,
+				9D606CA1280FFBEA00DD3F37 /* AQMGraphRouter.swift in Sources */,
 				9D6E61B527A4269C00663B73 /* AQMCityDataModel.swift in Sources */,
 				9D6E61AB27A4261D00663B73 /* AQMIndexClassifier.swift in Sources */,
 				9D4A9AF527A52940009599BF /* UIColor+Extension.swift in Sources */,
-				9D6E61A127A4256400663B73 /* AQMDataProvider.swift in Sources */,
+				9DD2785F2811180F00BA6C96 /* AQMQuideProtocol.swift in Sources */,
+				9D02C644280D3ED000DE6D51 /* AQMListRouter.swift in Sources */,
+				9D73623F281BA3E2007A2ABB /* AQMDataProvider.swift in Sources */,
 				9D4A9AFA27A54FE0009599BF /* Date+Extension.swift in Sources */,
 				9D6E611627A3FE0D00663B73 /* SceneDelegate.swift in Sources */,
 				9D6E618327A4228800663B73 /* AQMListViewController.swift in Sources */,
 				9D6E618D27A423FE00663B73 /* AQMCityDataTableViewCell.swift in Sources */,
+				9DD2788F28117C1000BA6C96 /* AQMCoreData.xcdatamodeld in Sources */,
+				9D12C8262816AF2000232960 /* Reachability.swift in Sources */,
 				9D6E61A627A425E300663B73 /* APIConstants.swift in Sources */,
-				9D6E619227A4246E00663B73 /* AQMQuideViewModel.swift in Sources */,
+				9D02C63B280D3D8300DE6D51 /* AQMListProtocol.swift in Sources */,
 				9D6E617927A4216C00663B73 /* AQMQuideViewController.swift in Sources */,
+				9D5FD7332815704000E1010B /* AQMResData+CoreDataProperties.swift in Sources */,
 				9D6E618827A4237F00663B73 /* AQMGraphViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,10 +764,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D4A9A9727A509D0009599BF /* AQMListViewModelTests.swift in Sources */,
+				9D12C8272816AF2000232960 /* Reachability.swift in Sources */,
+				9D4A9A9727A509D0009599BF /* AQMListViewTests.swift in Sources */,
 				9D4A9AF027A51065009599BF /* FakeDataProvider.swift in Sources */,
-				9D4A9AE827A50D04009599BF /* AQMDetailViewModelTests.swift in Sources */,
+				9D73627A281C12AE007A2ABB /* AQMQuideViewControllerTests.swift in Sources */,
+				9D73625C281C0935007A2ABB /* AQMQuideViewTests.swift in Sources */,
+				9D4A9AE827A50D04009599BF /* AQMDetailViewTests.swift in Sources */,
 				9D4A9AE327A50CAB009599BF /* AQMFakeDataProvider.swift in Sources */,
+				9D73626F281C0EC7007A2ABB /* AQMListViewControllerTests.swift in Sources */,
+				9D736267281C0B6E007A2ABB /* AQMCoreDataAndUtiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +1097,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9DD2788D28117C1000BA6C96 /* AQMCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9DD2788E28117C1000BA6C96 /* AQMCoreData.xcdatamodel */,
+			);
+			currentVersion = 9DD2788E28117C1000BA6C96 /* AQMCoreData.xcdatamodel */;
+			path = AQMCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9D6E610827A3FE0D00663B73 /* Project object */;
 }
