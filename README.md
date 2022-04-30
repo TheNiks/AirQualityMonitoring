@@ -14,14 +14,19 @@ Here display the live air quality monitoring data.
 - Enter the command pod install.
 - Open the AirQualityMonitoring.xcworkspace file.
 
+## Architecture
+- Used VIPER Architecture.
+- https://github.com/TheNiks/AirQualityMonitoring/blob/d3a1a04011ca9a9ae1a7ebb80e8411e3be2bae88/VIPER.png
+
+## Storage
+- CoreData
+
+## Folder Structure
+- https://github.com/TheNiks/AirQualityMonitoring/blob/bd72124ce314355f5bb0b49d40c914b1cbaa58d2/FolderStructure.png
+
 ### Third Party Library
 - Websocket => https://github.com/daltoniam/Starscream
-- Reactive programming => https://github.com/ReactiveX/RxSwift
 - Graphs => https://github.com/danielgindi/Charts
-- RxNimble => https://github.com/RxSwiftCommunity/RxNimble
-
-## Design Pattern
-- Used MVVM design pattern.
 
 ## Screens
 - Air Quality Index List
